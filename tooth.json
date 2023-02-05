@@ -1,22 +1,42 @@
 {
     "format_version": 1,
-    "tooth": "github.com/Tooth-Hub/<repository name>",
-    "version": "<version>",
-    "dependencies": {},
+    "tooth": "github.com/Tooth-Hub/Lip",
+    "version": "0.7.0",
     "information": {
-        "name": "<name>",
-        "description": "<description>",
-        "author": "<author>",
-        "license": "<license>",
-        "homepage": "<homepage>"
+        "name": "Lip",
+        "description": "A package installer, not only for LiteLoaderBDS",
+        "author": "LiteLDev",
+        "license": "GPL-3.0",
+        "homepage": "https://github.com/LiteLDev/Lip"
     },
     "placement": [
         {
-            "source": "<source>",
-            "destination": "<destination>"
+            "source": "windows/amd64/lip.exe",
+            "destination": ".lip/tools/lip/lip.update",
+            "GOOS": "windows",
+            "GOARCH": "amd64"
+        },
+        {
+            "source": "linux/amd64/lip",
+            "destination": ".lip/tools/lip/lip.update",
+            "GOOS": "linux",
+            "GOARCH": "amd64"
         }
     ],
-    "possession": [
-        "<possession>"
+    "commands": [
+        {
+            "type": "uninstall",
+            "commands": [
+                "echo \"\" > .lip/tools/lip/lip.remove"
+            ],
+            "GOOS": "linux"
+        },
+        {
+            "type": "uninstall",
+            "commands": [
+                "echo \"\" > .lip/tools/lip/lip.remove"
+            ],
+            "GOOS": "windows"
+        }
     ]
 }
