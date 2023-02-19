@@ -1,7 +1,7 @@
 {
     "format_version": 1,
     "tooth": "github.com/Tooth-Hub/Lip",
-    "version": "0.11.4514",
+    "version": "0.11.45141",
     "information": {
         "name": "Lip",
         "description": "A package installer, not only for LiteLoaderBDS",
