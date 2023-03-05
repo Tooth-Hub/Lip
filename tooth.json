@@ -1,7 +1,7 @@
 {
     "format_version": 1,
     "tooth": "github.com/Tooth-Hub/Lip",
-    "version": "0.11.45141",
+    "version": "0.13.0",
     "information": {
         "name": "Lip",
         "description": "A package installer, not only for LiteLoaderBDS",
@@ -38,5 +38,19 @@
             ],
             "GOOS": "windows"
         }
-    ]
+    ],
+    "tool": {
+        "name": "lip",
+        "description": "A package installer, not only for LiteLoaderBDS",
+        "entrypoints": [
+            {
+                "path": ".lip/tools/lip/lip",
+                "GOOS":"linux"
+            },
+            {
+                "path": ".lip/tools/lip/lip.exe",
+                "GOOS":"windows"
+            }
+        ]
+    }
 }
